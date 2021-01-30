@@ -7,8 +7,18 @@
 
 # User Input:
 
+#while 1:
+
 year = input("Enter a year to calculate if it is a leap year: ")
-year = int(year)
+try:
+  year = int(year)
+except ValueError:
+  print("The entered value is not a valid number")
+  exit()
+
+if len(str(year)) > 4 or year < 0: 
+  print("The entered value is not a valid year")
+  exit()
 
 # Logic:
 
